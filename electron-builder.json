@@ -1,0 +1,24 @@
+{
+    "appId": "com.ospuze.chat-app",
+    "productName": "Chat App (Cambiar mas adelante, es el nombre que sale en el installer)",
+    "files": ["dist-electron", "dist-react"],
+    
+    "mac": {
+        "target": "dmg"
+    },
+    "linux": {
+        "target": "AppImage",
+        "category": "Utility"
+    },
+    "win": {
+        "target": ["nsis", "portable"],
+        "icon": "./chat-app_logo.png"
+    },
+    "nsis": {
+        "oneClick": false,
+        "allowToChangeInstallationDirectory": true,
+        "createDesktopShortcut": true,
+        "createStartMenuShortcut": true,
+        "menuCategory": true
+    }
+}
