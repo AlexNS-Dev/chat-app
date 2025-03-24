@@ -40,3 +40,14 @@
 .read-the-docs {
   color: #888;
 }
+
+.drag-region {
+  -webkit-app-region: drag;
+  position: absolute;
+  inset: 0;
+  height: 2.5em;
+  background-color: firebrick;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
