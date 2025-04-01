@@ -1,0 +1,47 @@
+.WindowBar {
+    --bg-color: rgb(203, 72, 153);
+
+    -webkit-app-region: drag;
+    inset: 0;
+    height: 2.5rem;
+    background-color: var(--bg-color);
+    display: flex;
+    align-items: center;
+
+    .window-title {
+        flex: 1;
+        text-align: center;
+        padding-left: calc(2.5em * 3);
+    }
+
+    .window-controls {
+        height: 100%;
+        display: flex;
+
+        button {
+            -webkit-app-region: no-drag;
+            background-color: transparent;
+            color: aliceblue;
+            border: none;
+            height: 2.5rem;
+            width: 2.5rem;
+            cursor: pointer;
+            display: grid;
+            place-items: center;
+
+            &.btn-toggle-maximize,
+            &.btn-close {
+                svg {
+                    font-size: 1.4em;
+                }
+            }
+
+            &:hover {
+                background-color: color-mix(in srgb, var(--bg-color) 50%, rgba(27, 27, 27, 0.4) 50%);
+            }
+            &.btn-close:hover {
+                background-color: firebrick;
+            }
+        }
+    }
+}
