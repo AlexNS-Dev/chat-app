@@ -10,7 +10,7 @@ function App() {
 
     return (
         <div className="App">
-            {isElectron() && <WindowBar />}
+            {isElectron() && <WindowBar title='Window Title' />}
             Rest of the content
         </div>
     )

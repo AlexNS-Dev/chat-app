@@ -4,7 +4,11 @@ import { TbWindowMaximize, TbWindowMinimize } from 'react-icons/tb'
 import { FaWindowMinimize } from 'react-icons/fa6'
 import { IoClose } from 'react-icons/io5'
 
-const WindowBar = () => {
+interface WindowBarProps {
+    title: string
+}
+
+const WindowBar: React.FC<WindowBarProps> = ({ title }) => {
 
     // STATES
     const [isMaximized, setIsMaximized] = useState(false)
@@ -36,7 +40,7 @@ const WindowBar = () => {
 
     return (
         <div className='WindowBar'>
-            <span className='window-title'>Window Title</span>
+            <span className='window-title'>{title}</span>
             <div className="window-controls">
                 <button className='btn-minimize' onClick={windowControls.minimize}>
                     <FaWindowMinimize />
